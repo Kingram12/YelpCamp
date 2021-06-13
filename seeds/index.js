@@ -28,6 +28,7 @@ for(let i = 0; i < 50; i++) {
         title: `${sample(descriptors)} ${sample(places)}`,
         description: ' Lorem ipsum dolor sit amet consectetur adipisicing ',
         price, 
+        geometry: { type: 'Point', coordinates: [ -113.1331, 47.0202 ] },
         images:  [
             {
               url: 'https://res.cloudinary.com/dufrcvcwh/image/upload/v1623599794/YelpCamp/d2b5kalezy6iydofob0u.jpg',
