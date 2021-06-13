@@ -1,7 +1,7 @@
   (function () {
     "use strict";
     
-    bsCustomFileInput.init()
+    bsCustomFileInput.init();
 
     // Fetch all the forms we want to apply custom Boostrap validation styles to 
     var forms = document.querySelectorAll(".validated-form");
@@ -21,4 +21,4 @@
         false
       );
     });
-  })();
+  })
