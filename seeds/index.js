@@ -26,9 +26,18 @@ for(let i = 0; i < 50; i++) {
         author: '60c290ff76551d4c7cad125e',
         location: `${cities[random1000].city}, ${cities[random1000].state}`,
         title: `${sample(descriptors)} ${sample(places)}`,
-        image: 'https://source.unsplash.com/collection/4832051',
         description: ' Lorem ipsum dolor sit amet consectetur adipisicing ',
-        price 
+        price, 
+        images:  [
+            {
+              url: 'https://res.cloudinary.com/dufrcvcwh/image/upload/v1623599794/YelpCamp/d2b5kalezy6iydofob0u.jpg',
+              filename: 'YelpCamp/d2b5kalezy6iydofob0u'
+            },
+            {
+              url: 'https://res.cloudinary.com/dufrcvcwh/image/upload/v1623599794/YelpCamp/igehfqba4akggwjqfbzw.jpg',
+              filename: 'YelpCamp/igehfqba4akggwjqfbzw'
+            }
+          ]
     })
     await camp.save();
 }
