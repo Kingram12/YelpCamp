@@ -2,7 +2,6 @@ if (process.env.NODE_ENV !== "production") {
     require('dotenv').config();
 }
 
-
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -18,11 +17,12 @@ const helmet = require('helmet');
 
 const mongoSanitize = require('express-mongo-sanitize');
 
-
-
 const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
+const dbUrl = process.env.DB_URL;
+
+// mongodb://localhost:27017/yelp-camp
 
 mongoose.connect('mongodb://localhost:27017/yelp-camp', {
     useNewUrlParser: true,
@@ -104,7 +104,7 @@ app.use(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/douqbebwk/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+                "https://res.cloudinary.com/dufrcvcwh/",
                 "https://images.unsplash.com/",
             ],
             fontSrc: ["'self'", ...fontSrcUrls],
